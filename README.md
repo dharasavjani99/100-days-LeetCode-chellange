@@ -23,33 +23,6 @@ This repository documents my journey of solving LeetCode problems consistently f
 
 ---
 
-## 📂 Repository Structure
-
-```
-100-Days-LeetCode/
-│
-├── Day-01/
-├── Day-02/
-├── Day-03/
-│   ├── Problem Name.cpp
-│   └── README.md (optional)
-│
-└── ...
-```
-
----
-
-## 📋 Progress Tracker
-
-| Day | Problem | Difficulty | Status |
-|:---:|---------|:----------:|:------:|
-| 01 | Two Sum | Easy | ✅ |
-| 02 | Valid Parentheses | Easy | ✅ |
-| 03 | Merge Sorted Array | Easy | ✅ |
-| ... | ... | ... | 🚀 |
-
----
-
 ## 📌 What Each Solution Includes
 
 - Problem Name
