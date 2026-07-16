@@ -1,0 +1,24 @@
+# 3658. GCD of Odd and Even Sums
+
+**Difficulty:** Easy
+
+## Approach
+- The sum of the first `n` odd numbers is `n²`.
+- The sum of the first `n` even numbers is `n(n + 1)`.
+- Since `GCD(n², n(n + 1)) = n`, we can directly return `n`.
+
+## Complexity
+- **Time:** O(1)
+- **Space:** O(1)
+
+## Solution (C++)
+
+```cpp
+class Solution {
+public:
+    int gcdOfOddEvenSums(int n) {
+        return n;
+    }
+};
+```
+
