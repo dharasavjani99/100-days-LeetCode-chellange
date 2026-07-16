@@ -1,0 +1,53 @@
+# 3867. Sum of GCD of Formed Pairs
+
+🔗 **Problem Link:** https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/
+
+## 💡 Logic
+
+- Find the maximum value seen so far while traversing the array.
+- Compute the GCD of the current element and the current maximum.
+- Store these GCD values in a new array.
+- Sort the GCD array.
+- Pair the smallest and largest GCD values, then calculate the GCD of each pair.
+- Add the GCD of every formed pair to get the final answer.
+
+## ✅ Solution (C++)
+
+```cpp
+#include <vector>
+#include <algorithm>
+#include <numeric>
+using namespace std;
+
+class Solution {
+public:
+    long long gcdSum(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> prefixGcd(n);
+
+        int mx = 0;
+        for (int i = 0; i < n; i++) {
+            mx = max(mx, nums[i]);
+            prefixGcd[i] = gcd(nums[i], mx);
+        }
+
+        sort(prefixGcd.begin(), prefixGcd.end());
+
+        long long ans = 0;
+        for (int i = 0; i < n / 2; i++) {
+            ans += gcd(prefixGcd[i], prefixGcd[n - 1 - i]);
+        }
+
+        return ans;
+    }
+};
+```
+
+### ⏱️ Time Complexity
+- **O(n log n + n log M)**
+
+### 📦 Space Complexity
+- **O(n)**
+
+---
+⭐ If you found this solution helpful, consider giving this repository a star!
